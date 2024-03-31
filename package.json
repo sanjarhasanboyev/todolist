@@ -1,0 +1,26 @@
+{
+  "name": "task-work",
+  "version": "1.0.0",
+  "description": "demo project crud",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "5.11.0",
+    "@types/express": "4.17.21",
+    "autoprefixer": "^10.4.19",
+    "express": "4.19.2",
+    "express-handlebars": "7.1.2",
+    "moment": "^2.30.1",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "prisma": "5.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

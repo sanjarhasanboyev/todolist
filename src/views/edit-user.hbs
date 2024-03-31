@@ -1,0 +1,41 @@
+<div class="mt-4 mb-2">
+    <h1 class="text-4xl">Hodim qo'shish</h1>
+</div>
+<form method="post" class="w-96 *:w-full">
+    <input type="text" name="name" placeholder="name"
+        class="bg-slate-100 placeholder:text-gray-500 rounded-md p-2 border border-gray-400 mt-2 mb-1"
+        value="{{user.name}}"> <br>
+    <input type="text" name="surname" placeholder="surname"
+        class="bg-slate-100 placeholder:text-gray-500 rounded-md p-2 border border-gray-400 mt-2 mb-1"
+        value="{{user.surname}}"> <br>
+    <input type="email" name="email" placeholder="email"
+        class="bg-slate-100 placeholder:text-gray-500 rounded-md p-2 border border-gray-400 mt-2 mb-1"
+        value="{{user.email}}"> <br>
+    <input type="number" name="salary" placeholder="salary"
+        class="bg-slate-100 placeholder:text-gray-500 rounded-md p-2 border border-gray-400 mt-2 mb-1"
+        value="{{user.salary}}"> <br>
+    <input type="date" id="dateInput" name="date" placeholder="date"
+        class="bg-slate-100 placeholder:text-gray-500 rounded-md p-2 border border-gray-400 mt-2 mb-1" value="{{user.date}}"> <br>
+    {{!-- <a href="/user-list" class="bg-blue-500 rounded-md py-2 px-5 text-slate-100">Hodimlar ro'yxati</a> --}}
+
+    {{!-- <input type="text" id="oldDate"  value="{{user.date}}"> --}}
+
+    <div class="btn mt-2 flex justify-around w-96 *:mr-1">
+        <button class="bg-blue-500 rounded-md py-2 px-5 text-white w-full" type="submit">Saqlash</button>
+        <a href="/user-list" class="bg-slate-200 rounded-md py-2 px-5 text-slate-950 w-full text-center">Bekor
+            qilish</a>
+    </div>
+</form>
+
+<script>
+    const oldDate = document.getElementById("oldDate");
+    console.log(oldDate);
+    const dateInput = document.getElementById("dateInput");
+    console.log(dateInput)
+    dateInput.value = oldDate;
+
+    const date = new Date(oldDate);
+    console.log(date)
+    const formattedDate = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+    console.log(formattedDate);
+</script>
